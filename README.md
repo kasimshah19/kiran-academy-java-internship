@@ -208,24 +208,24 @@ The repository is divided chronologically across the 3 calendar months, allowing
 ```text
 kiran-academy-java-internship/
 │
-├── 📁 October/                        # Month 1: 30 Calendar Days
+├── 📁 October/                        # Month 1: Days 01 – 30 (30 Days)
 │   │                                  # Focus: Core Java Fundamentals, OOP Logic & Computational Math
 │   ├── 📁 Day01_Task1/                # Basic Syntax & Arithmetic Operators (Completed)
 │   ├── 📁 Day02_Task2/                # Conditional Statements & Branching Logic
 │   ├── 📁 Day03_Task3/                # Iterative Constructs & Loops
 │   └── ... [Day04_Task4 to Day30_Task30]
 │
-├── 📁 November/                       # Month 2: 30 Calendar Days
+├── 📁 November/                       # Month 2: Days 31 – 60 (30 Days)
 │   │                                  # Focus: Advanced OOP, Exceptions, Collections, Servlets & JSP
-│   ├── 📁 Day01_Task1/                # Class & Object Architectures
-│   ├── 📁 Day02_Task2/                # Constructors & Polymorphic Design
-│   └── ... [Day03_Task3 to Day30_Task30]
+│   ├── 📁 Day31_Task31/               # Class & Object Architectures
+│   ├── 📁 Day32_Task32/               # Constructors & Polymorphic Design
+│   └── ... [Day33_Task33 to Day60_Task60]
 │
-├── 📁 December/                       # Month 3: 31 Calendar Days
+├── 📁 December/                       # Month 3: Days 61 – 90 (30 Days)
 │   │                                  # Focus: Spring, Spring Boot, Hibernate ORM, MySQL & React JS
-│   ├── 📁 Day01_Task1/                # Spring Boot REST API Construction
-│   ├── 📁 Day02_Task2/                # Hibernate Entity Mapping & Persistence
-│   └── ... [Day03_Task3 to Day31_Task31]
+│   ├── 📁 Day61_Task61/               # Spring Boot REST API Construction
+│   ├── 📁 Day62_Task62/               # Hibernate Entity Mapping & Persistence
+│   └── ... [Day63_Task63 to Day90_Task90]
 │
 └── 📄 README.md                       # Comprehensive Internship Documentation & Syllabus Tracker
 ```
