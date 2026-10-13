@@ -4,8 +4,6 @@
 # Log files
 *.log
 
-# Personal & Confidential Documents
-*.pdf
 
 # OS generated files
 .DS_Store
