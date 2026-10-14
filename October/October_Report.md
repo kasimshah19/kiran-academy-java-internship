@@ -30,6 +30,8 @@ The focus of October 2026 centered on foundational Java development, local devel
 
 - **Date and Day:** 13 October 2026, Tuesday
 - **Task Assigned:** Install JDK, configure local development workspace, create initial project directory structure, write 6 basic Java programs, commit and push source code to GitHub, and submit repository link via email.
+- **Problem Statement:**
+  Set up the local Java development environment from scratch, establish structured project directories, and develop fundamental standalone Java programs to verify compiler setup and perform basic mathematical computations (binary addition, subtraction, multiplication, double-precision division, and modulus) without compilation errors.
 - **Objective:** Establish a working Java runtime and compiler environment, verify console output functionality, and implement fundamental arithmetic operations using Java primitive types.
 - **Requirements:**
   - Verify Java Development Kit (JDK) installation and environment variables.
@@ -37,6 +39,12 @@ The focus of October 2026 centered on foundational Java development, local devel
   - Implement integer arithmetic operations (addition, subtraction, multiplication, and modulus) using test values `a = 20` and `b = 3`.
   - Implement floating-point division using explicit double type casting to avoid integer truncation.
   - Ensure zero compilation errors and follow standard Java naming conventions.
+- **Solution & Implementation Approach:**
+  - Configured workspace directory structure under `October/Day01_Task1` using OpenJDK 17.0.20.1 and Antigravity IDE.
+  - Formulated six standalone, self-contained classes (`Hello`, `Addition`, `Difference`, `Multiplication`, `Division`, `Modulus`).
+  - Resolved integer truncation in division by explicitly type-casting the numerator to `double` (`(double) a / b`), ensuring precise floating-point quotient output.
+  - Implemented dynamic string concatenation within `System.out.println()` for clear equation presentation.
+  - Initialized local Git version tracking and pushed the initial codebase to the remote GitHub repository.
 - **Work Done:**
   - Configured workspace directory structure under `October/Day01_Task1`.
   - Created 6 independent Java source files covering basic output and arithmetic operators.
@@ -78,6 +86,8 @@ Modulus of 20 and 3 = 2
 
 - **Date and Day:** 14 October 2026, Wednesday
 - **Task Assigned:** Construct a modular Shopping Bill calculation program in Java where item amounts are supplied directly via method arguments, calculation methods return numerical values without console printing, and a multi-tier tax and discount model is applied.
+- **Problem Statement:**
+  Build an automated shopping billing system in Java that computes category-specific Goods and Services Tax (Electronics at 18% GST, Fashion at 13% GST, and Food at 7% GST), aggregates total post-tax billing, and derives the final payable amount after applying a 20% discount. The system must strictly disallow interactive or command-line input, require calculation methods to return numerical values without console printing, and format the final summary line with two decimal places.
 - **Objective:** Design reusable Java methods with input parameters and return types, chain methods hierarchically, and format monetary computations cleanly.
 - **Requirements:**
   - Avoid user input prompts (`Scanner`, `System.in`, command-line arguments); pass values directly in method calls.
@@ -89,6 +99,12 @@ Modulus of 20 and 3 = 2
   - Execute test scenario using `a = 100`, `b = 100`, `c = 100`, `d = 100`, `e = 100`.
   - Print single formatted summary line with values rounded to 2 decimal places using `System.out.printf`.
   - Maintain the file inside `October/Day01_Task1`.
+- **Solution & Implementation Approach:**
+  - Created `ShoppingBill.java` structured with five single-responsibility static calculation methods and a dedicated `main` driver method.
+  - Separated category tax computations into dedicated functions returning `double` precision values: `calculateElectronicsGST`, `calculateFashionGST`, and `calculateFoodGST`.
+  - Built a composite `totalBill` method that chains and aggregates returns from all three category functions.
+  - Implemented `calculateDiscountedBill` by calling `totalBill()`, computing 20% discount (`total * 0.20`), and subtracting it to yield the final payable sum.
+  - Hardcoded test parameters directly in `main` (`a = b = c = d = e = 100`), calculated the discount differential (`total - finalAmount`), and formatted the output using `System.out.printf` with `%.2f` specifiers.
 - **Work Done:**
   - Created `ShoppingBill.java` within `October/Day01_Task1` containing 5 static helper methods and a `main` execution method.
   - Implemented the complete tax and discount pipeline returning `double` precision amounts.
