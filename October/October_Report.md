@@ -11,7 +11,7 @@
 
 ## 1. Overview
 
-The focus of October 2026 centered on foundational Java development, local development environment configuration, and version control workflows. Core competencies established during this period included standard class structures, primitive arithmetic operations, explicit type casting, and modular method-based program design. All assignments were tracked, compiled, tested, and maintained under version control using Git and GitHub.
+The focus of October 2026 centered on foundational Java development, local development environment configuration, and version control workflows. Day 01 established core competencies in class structures, primitive arithmetic operations, explicit type casting, and modular method-based program design across foundational programs and two multi-tier billing case studies: **Day 01 Task 1 (Shopping Bill)** and **Day 01 Task 2 (Travel Booking Bill)**. All assignments were tracked, compiled, tested, and maintained under version control using Git and GitHub.
 
 ---
 
@@ -19,17 +19,17 @@ The focus of October 2026 centered on foundational Java development, local devel
 
 | Date | Day | Task | Folder | Status |
 |:---|:---|:---|:---|:---|
-| 13/10/2026 | Tuesday | Task 1: Environment Setup and Basic Programs | October/Day01_Task1 | Completed |
-| 14/10/2026 | Wednesday | Task 01: Shopping Bill (GST First, Discount After) | October/Day01_Task1 | Completed |
-| 14/10/2026 | Wednesday | Task 02: Travel Booking Bill (Tax First, Discount After) | October/Day01_Task1 | Completed |
+| 13/10/2026 | Tuesday (Day 01) | Day 01: Environment Setup & Core Arithmetic Programs | October/Day01_Task1 | Completed |
+| 14/10/2026 | Wednesday (Day 01) | Day 01 — Task 1: Shopping Bill (GST First, Discount After) | October/Day01_Task1 | Completed |
+| 14/10/2026 | Wednesday (Day 01) | Day 01 — Task 2: Travel Booking Bill (Tax First, Discount After) | October/Day01_Task1 | Completed |
 
 ---
 
 ## 3. Daily Log
 
-### 13 October 2026 (Tuesday)
+### 13 October 2026 (Tuesday) — Day 01: Environment Setup & Core Arithmetic Programs
 
-- **Date and Day:** 13 October 2026, Tuesday
+- **Date and Day:** 13 October 2026, Tuesday (Day 01)
 - **Task Assigned:** Install JDK, configure local development workspace, create initial project directory structure, write 6 basic Java programs, commit and push source code to GitHub, and submit repository link via email.
 - **Problem Statement:**
   Set up the local Java development environment from scratch, establish structured project directories, and develop fundamental standalone Java programs to verify compiler setup and perform basic mathematical computations (binary addition, subtraction, multiplication, double-precision division, and modulus) without compilation errors.
@@ -83,12 +83,12 @@ Modulus of 20 and 3 = 2
 
 ---
 
-### 14 October 2026 (Wednesday) — Task 01: Shopping Bill (GST First, Discount After)
+### 14 October 2026 (Wednesday) — Day 01, Task 1: Shopping Bill (GST First, Discount After)
 
-- **Date and Day:** 14 October 2026, Wednesday
-- **Task Assigned:** Construct a modular Shopping Bill calculation program in Java where item amounts are supplied directly via method arguments, calculation methods return numerical values without console printing, and a multi-tier tax and discount model is applied.
+- **Date and Day:** 14 October 2026, Wednesday (Day 01 — Task 1)
+- **Task Assigned:** Day 01 Task 1 Case Study: Construct a modular Shopping Bill calculation program in Java (`ShoppingBill.java`) inside `October/Day01_Task1`, where item amounts are supplied directly via method arguments, calculation methods return numerical values without console printing, and a multi-tier tax and discount model is applied.
 - **Problem Statement:**
-  Build an automated shopping billing system in Java that computes category-specific Goods and Services Tax (Electronics at 18% GST, Fashion at 13% GST, and Food at 7% GST), aggregates total post-tax billing, and derives the final payable amount after applying a 20% discount. The system must strictly disallow interactive or command-line input, require calculation methods to return numerical values without console printing, and format the final summary line with two decimal places.
+  As the first practical case study for Day 01, build an automated shopping billing system in Java that computes category-specific Goods and Services Tax (Electronics at 18% GST, Fashion at 13% GST, and Food at 7% GST), aggregates total post-tax billing, and derives the final payable amount after applying a 20% discount. The system must strictly disallow interactive or command-line input, require calculation methods to return numerical values without console printing, and format the final summary line with two decimal places.
 - **Objective:** Design reusable Java methods with input parameters and return types, chain methods hierarchically, and format monetary computations cleanly.
 - **Requirements:**
   - Avoid user input prompts (`Scanner`, `System.in`, command-line arguments); pass values directly in method calls.
@@ -107,12 +107,12 @@ Modulus of 20 and 3 = 2
   - Implemented `calculateDiscountedBill` by calling `totalBill()`, computing 20% discount (`total * 0.20`), and subtracting it to yield the final payable sum.
   - Hardcoded test parameters directly in `main` (`a = b = c = d = e = 100`), calculated the discount differential (`total - finalAmount`), and formatted the output using `System.out.printf` with `%.2f` specifiers.
 - **Work Done:**
-  - Created `ShoppingBill.java` within `October/Day01_Task1` containing 5 static helper methods and a `main` execution method.
+  - Created `ShoppingBill.java` within `October/Day01_Task1` containing 5 static helper methods and a `main` execution method as Day 01 Task 1.
   - Implemented the complete tax and discount pipeline returning `double` precision amounts.
 
-| File | Purpose |
-|:---|:---|
-| `ShoppingBill.java` | Modular billing engine calculating category GST rates, total bill summation, and discount deductions. |
+| File | Task | Purpose |
+|:---|:---|:---|
+| `ShoppingBill.java` | Day 01 — Task 1 | Modular billing engine calculating category GST rates, total bill summation, and discount deductions. |
 
   **Calculation Flow (`a = b = c = d = e = 100`):**
 
@@ -141,12 +141,12 @@ Total after GST = 569.00 | Discount = 113.80 | Final payable amount = 455.20
 
 ---
 
-### 14 October 2026 (Wednesday) — Task 02: Travel Booking Bill (Tax First, Discount After)
+### 14 October 2026 (Wednesday) — Day 01, Task 2: Travel Booking Bill (Tax First, Discount After)
 
-- **Date and Day:** 14 October 2026, Wednesday
-- **Task Assigned:** Construct a modular Travel Booking Bill calculation program in Java where booking amounts are supplied directly via method parameters, calculation methods return numerical values without console printing, and a multi-tier tax and discount model is applied.
+- **Date and Day:** 14 October 2026, Wednesday (Day 01 — Task 2)
+- **Task Assigned:** Day 01 Task 2 Case Study: Construct a modular Travel Booking Bill calculation program in Java (`TravelBill.java`) inside `October/Day01_Task1` as the second practical task of Day 01, where booking amounts are supplied directly via method parameters, calculation methods return numerical values without console printing, and a multi-tier tax and discount model is applied.
 - **Problem Statement:**
-  Develop an automated travel reservation billing system in Java that calculates tiered service taxes (Flight + Hotel at 12% tax, Cab + Food at 5% tax, and Travel Insurance at 18% tax), sums the post-tax bill across all booking categories, and determines the final payable amount after applying a promotional 15% discount. The implementation must strictly forbid interactive inputs (`Scanner`, CLI arguments), require all calculation methods to return numerical values without console printing, and format the final single-line summary with two decimal places.
+  As the second case study for Day 01 (`October/Day01_Task1`), develop an automated travel reservation billing system in Java that calculates tiered service taxes (Flight + Hotel at 12% tax, Cab + Food at 5% tax, and Travel Insurance at 18% tax), sums the post-tax bill across all booking categories, and determines the final payable amount after applying a promotional 15% discount. The implementation must strictly forbid interactive inputs (`Scanner`, CLI arguments), require all calculation methods to return numerical values without console printing, and format the final single-line summary with two decimal places.
 - **Objective:** Design reusable, single-responsibility Java static methods with parameter passing and return values, execute composite method aggregation, and format monetary computations cleanly.
 - **Requirements:**
   - Avoid user input prompts (`Scanner`, `System.in`, command-line arguments); pass values directly in method calls.
@@ -169,13 +169,14 @@ Total after GST = 569.00 | Discount = 113.80 | Final payable amount = 455.20
   - Implemented `calculateDiscountedBill(a, b, c, d, e)` by calling `totalBill()`, computing a 15% discount (`total * 0.15`), and returning `total - discount`.
   - In `main`, supplied fixed test values `a = b = c = d = e = 100`, computed `discount = total - finalAmount`, and printed the exact summary line with `System.out.printf`.
 - **Work Done:**
-  - Created `TravelBill.java` within `October/Day01_Task1` containing 5 static calculation methods and a `main` execution method.
+  - Created `TravelBill.java` within `October/Day01_Task1` containing 5 static calculation methods and a `main` execution method as Day 01 Task 2.
+  - Successfully completed all 8 Java source files under Day 01 (`October/Day01_Task1`): 6 basic arithmetic operators, ShoppingBill (Task 1), and TravelBill (Task 2).
   - Implemented the complete tax calculation and discount pipeline using `double` precision arithmetic.
   - Verified compilation and runtime output (`javac` and `java`), ensuring zero errors and exact decimal formatting.
 
-| File | Purpose |
-|:---|:---|
-| `TravelBill.java` | Modular travel booking engine calculating category tax rates (12%, 5%, 18%), total bill summation, and discount deduction. |
+| File | Task | Purpose |
+|:---|:---|:---|
+| `TravelBill.java` | Day 01 — Task 2 | Modular travel booking engine calculating category tax rates (12%, 5%, 18%), total bill summation, and discount deduction. |
 
   **Calculation Flow (`a = b = c = d = e = 100`):**
 
