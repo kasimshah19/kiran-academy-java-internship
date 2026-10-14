@@ -239,7 +239,7 @@ The journey kicked off on **Day 01** in [`October/Day01_Task1`](./October/Day01_
 ```
 Variables tested:
 - Arithmetic: a = 20, b = 3
-- Shopping Bill: a = 100, b = 100, c = 100, d = 100, e = 100
+- Shopping Bill & Travel Bill: a = 100, b = 100, c = 100, d = 100, e = 100
 ```
 
 | Source File | Technical Focus | Formula / Implementation | Verified Output |
@@ -251,6 +251,7 @@ Variables tested:
 | [`Division.java`](./October/Day01_Task1/Division.java) | Explicit double casting | `(double) a / b` | `Division of 20 and 3 = 6.666666666666667` |
 | [`Modulus.java`](./October/Day01_Task1/Modulus.java) | Remainder / Modulo operator | `a % b` | `Modulus of 20 and 3 = 2` |
 | [`ShoppingBill.java`](./October/Day01_Task1/ShoppingBill.java) | Methods & Multi-tier GST Billing | `GST (18%, 13%, 7%) - 20% Disc.` | `Total after GST = 569.00 \| Discount = 113.80 \| Final payable amount = 455.20` |
+| [`TravelBill.java`](./October/Day01_Task1/TravelBill.java) | Methods & Multi-tier Travel Tax Billing | `Tax (12%, 5%, 18%) - 15% Disc.` | `Total after tax = 552.00 \| Discount = 82.80 \| Final payable amount = 469.20` |
 
 ---
 

@@ -21,6 +21,7 @@ The focus of October 2026 centered on foundational Java development, local devel
 |:---|:---|:---|:---|:---|
 | 13/10/2026 | Tuesday | Task 1: Environment Setup and Basic Programs | October/Day01_Task1 | Completed |
 | 14/10/2026 | Wednesday | Task 01: Shopping Bill (GST First, Discount After) | October/Day01_Task1 | Completed |
+| 14/10/2026 | Wednesday | Task 02: Travel Booking Bill (Tax First, Discount After) | October/Day01_Task1 | Completed |
 
 ---
 
@@ -82,7 +83,7 @@ Modulus of 20 and 3 = 2
 
 ---
 
-### 14 October 2026 (Wednesday)
+### 14 October 2026 (Wednesday) — Task 01: Shopping Bill (GST First, Discount After)
 
 - **Date and Day:** 14 October 2026, Wednesday
 - **Task Assigned:** Construct a modular Shopping Bill calculation program in Java where item amounts are supplied directly via method arguments, calculation methods return numerical values without console printing, and a multi-tier tax and discount model is applied.
@@ -136,6 +137,69 @@ Total after GST = 569.00 | Discount = 113.80 | Final payable amount = 455.20
   - Floating-point mathematical calculations using `double`.
   - String formatting and precision specification (`%.2f`) using `System.out.printf`.
   - Modular code design promoting maintainability and reusability.
+- **Status:** Completed and Submitted
+
+---
+
+### 14 October 2026 (Wednesday) — Task 02: Travel Booking Bill (Tax First, Discount After)
+
+- **Date and Day:** 14 October 2026, Wednesday
+- **Task Assigned:** Construct a modular Travel Booking Bill calculation program in Java where booking amounts are supplied directly via method parameters, calculation methods return numerical values without console printing, and a multi-tier tax and discount model is applied.
+- **Problem Statement:**
+  Develop an automated travel reservation billing system in Java that calculates tiered service taxes (Flight + Hotel at 12% tax, Cab + Food at 5% tax, and Travel Insurance at 18% tax), sums the post-tax bill across all booking categories, and determines the final payable amount after applying a promotional 15% discount. The implementation must strictly forbid interactive inputs (`Scanner`, CLI arguments), require all calculation methods to return numerical values without console printing, and format the final single-line summary with two decimal places.
+- **Objective:** Design reusable, single-responsibility Java static methods with parameter passing and return values, execute composite method aggregation, and format monetary computations cleanly.
+- **Requirements:**
+  - Avoid user input prompts (`Scanner`, `System.in`, command-line arguments); pass values directly in method calls.
+  - Define `calculateTravelStayTax(a, b)` returning sum of flight and hotel plus 12% tax.
+  - Define `calculateCabFoodTax(c, d)` returning sum of cab and food expenses plus 5% tax.
+  - Define `calculateInsuranceTax(e)` returning insurance amount plus 18% tax.
+  - Define `totalBill(a, b, c, d, e)` aggregating the returns of the three tax calculation methods.
+  - Define `calculateDiscountedBill(a, b, c, d, e)` applying a 15% discount on the total bill and returning the final payable amount.
+  - Execute test scenario using `a = 100`, `b = 100`, `c = 100`, `d = 100`, `e = 100`.
+  - Print single formatted summary line with values rounded to 2 decimal places using `System.out.printf` and no currency symbol.
+  - Maintain clean code with zero comments (no `//`, `/* */`, or Javadoc) and no external packages/dependencies.
+  - Maintain the file inside `October/Day01_Task1`.
+- **Solution & Implementation Approach:**
+  - Created `TravelBill.java` structured with five single-responsibility `public static` calculation methods and a dedicated `main` driver method.
+  - Encapsulated service category tax computations into dedicated functions returning `double` precision values:
+    - `calculateTravelStayTax(a, b)`: computes `sum = a + b` and returns `sum + (sum * 0.12)`.
+    - `calculateCabFoodTax(c, d)`: computes `sum = c + d` and returns `sum + (sum * 0.05)`.
+    - `calculateInsuranceTax(e)`: returns `e + (e * 0.18)`.
+  - Built an aggregator method `totalBill(a, b, c, d, e)` that invokes and sums the results of all three tax methods.
+  - Implemented `calculateDiscountedBill(a, b, c, d, e)` by calling `totalBill()`, computing a 15% discount (`total * 0.15`), and returning `total - discount`.
+  - In `main`, supplied fixed test values `a = b = c = d = e = 100`, computed `discount = total - finalAmount`, and printed the exact summary line with `System.out.printf`.
+- **Work Done:**
+  - Created `TravelBill.java` within `October/Day01_Task1` containing 5 static calculation methods and a `main` execution method.
+  - Implemented the complete tax calculation and discount pipeline using `double` precision arithmetic.
+  - Verified compilation and runtime output (`javac` and `java`), ensuring zero errors and exact decimal formatting.
+
+| File | Purpose |
+|:---|:---|
+| `TravelBill.java` | Modular travel booking engine calculating category tax rates (12%, 5%, 18%), total bill summation, and discount deduction. |
+
+  **Calculation Flow (`a = b = c = d = e = 100`):**
+
+| Step | Method | Calculation | Result |
+|:---|:---|:---|:---|
+| 1 | `calculateTravelStayTax(a, b)` | `(100 + 100) + 12% Tax = 200.00 + 24.00` | `224.00` |
+| 2 | `calculateCabFoodTax(c, d)` | `(100 + 100) + 5% Tax = 200.00 + 10.00` | `210.00` |
+| 3 | `calculateInsuranceTax(e)` | `100 + 18% Tax = 100.00 + 18.00` | `118.00` |
+| 4 | `totalBill(a, b, c, d, e)` | `224.00 + 210.00 + 118.00` | `552.00` |
+| 5 | `calculateDiscountedBill(a, b, c, d, e)` | `552.00 - (15% of 552.00 = 82.80)` | `469.20` |
+
+- **Sample Output:**
+
+```text
+Total after tax = 552.00 | Discount = 82.80 | Final payable amount = 469.20
+```
+
+- **Concepts Learned:**
+  - Modular static method design with strong typing (`double` parameters and return values).
+  - Clean separation of computational business logic from console display output.
+  - Composite method aggregation and multi-level function delegation.
+  - Mathematical modeling of tiered tax additions and percentage discount deductions.
+  - String formatting precision control using `System.out.printf` (`%.2f`).
+  - Writing clean, self-documenting Java code following strict engineering guidelines.
 - **Status:** Completed and Submitted
 
 ---
