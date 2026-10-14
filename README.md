@@ -210,7 +210,7 @@ kiran-academy-java-internship/
 │
 ├── 📁 October/                        # Month 1: Days 01 – 30 (30 Days)
 │   │                                  # Focus: Core Java Fundamentals, OOP Logic & Computational Math
-│   ├── 📁 Day01_Task1/                # Basic Syntax & Arithmetic Operators (Completed)
+│   ├── 📁 Day01_Task1/                # Basic Syntax, Arithmetic Operators & Shopping Bill (Completed)
 │   ├── 📁 Day02_Task2/                # Conditional Statements & Branching Logic
 │   ├── 📁 Day03_Task3/                # Iterative Constructs & Loops
 │   └── ... [Day04_Task4 to Day30_Task30]
@@ -234,10 +234,12 @@ kiran-academy-java-internship/
 
 ## 🌟 Day 01 Detailed Case Study
 
-The journey kicked off on **Day 01** in [`October/Day01_Task1`](./October/Day01_Task1), establishing pristine coding standards and foundational Java arithmetic execution:
+The journey kicked off on **Day 01** in [`October/Day01_Task1`](./October/Day01_Task1), establishing pristine coding standards, foundational Java arithmetic execution, and modular billing logic:
 
 ```
-Variables tested: a = 20, b = 3
+Variables tested:
+- Arithmetic: a = 20, b = 3
+- Shopping Bill: a = 100, b = 100, c = 100, d = 100, e = 100
 ```
 
 | Source File | Technical Focus | Formula / Implementation | Verified Output |
@@ -248,6 +250,7 @@ Variables tested: a = 20, b = 3
 | [`Multiplication.java`](./October/Day01_Task1/Multiplication.java) | Integer multiplication | `a * b` | `Multiplication of 20 and 3 = 60` |
 | [`Division.java`](./October/Day01_Task1/Division.java) | Explicit double casting | `(double) a / b` | `Division of 20 and 3 = 6.666666666666667` |
 | [`Modulus.java`](./October/Day01_Task1/Modulus.java) | Remainder / Modulo operator | `a % b` | `Modulus of 20 and 3 = 2` |
+| [`ShoppingBill.java`](./October/Day01_Task1/ShoppingBill.java) | Methods & Multi-tier GST Billing | `GST (18%, 13%, 7%) - 20% Disc.` | `Total after GST = 569.00 \| Discount = 113.80 \| Final payable amount = 455.20` |
 
 ---
 
