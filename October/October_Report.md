@@ -11,7 +11,7 @@
 
 ## 1. Overview
 
-The focus of October 2026 centered on foundational Java development, local development environment configuration, and version control workflows. Day 01 established core competencies in class structures, primitive arithmetic operations, explicit type casting, and modular method-based program design across foundational programs and two multi-tier billing case studies: **Day 01 Task 1 (Shopping Bill)** and **Day 01 Task 2 (Travel Booking Bill)**. All assignments were tracked, compiled, tested, and maintained under version control using Git and GitHub.
+The focus of October 2026 centered on foundational Java development, local development environment configuration, and version control workflows. Day 01 established core competencies in class structures, primitive arithmetic operations, explicit type casting, and modular method-based program design across foundational programs and two multi-tier billing case studies: **Day 01 Task 1 (Shopping Bill)** and **Day 01 Task 2 (Travel Booking Bill)**. Day 02 expanded into interactive console-based applications, control flow logic, input sanitization, dynamic menu systems, and pseudo-random generation with **Day 02 Task 2 (Cab Booking Chatbot)**. All assignments were tracked, compiled, tested, and maintained under version control using Git and GitHub.
 
 ---
 
@@ -22,6 +22,7 @@ The focus of October 2026 centered on foundational Java development, local devel
 | 13/10/2026 | Tuesday (Day 01) | Day 01: Environment Setup & Core Arithmetic Programs | October/Day01_Task1 | Completed |
 | 14/10/2026 | Wednesday (Day 01) | Day 01 — Task 1: Shopping Bill (GST First, Discount After) | October/Day01_Task1 | Completed |
 | 14/10/2026 | Wednesday (Day 01) | Day 01 — Task 2: Travel Booking Bill (Tax First, Discount After) | October/Day01_Task1 | Completed |
+| 16/10/2026 | Friday (Day 02) | Day 02 — Task 2: Console-Based Cab Booking Chatbot | October/Day02_Task2 | Completed |
 
 ---
 
@@ -205,12 +206,178 @@ Total after tax = 552.00 | Discount = 82.80 | Final payable amount = 469.20
 
 ---
 
+### 16 October 2026 (Friday) — Day 02, Task 2: Console-Based Cab Booking Chatbot
+
+- **Date and Day:** 16 October 2026, Friday (Day 02 — Task 2)
+- **Task Assigned:** Day 02 Task 2 Case Study: Construct an interactive, crash-proof console-based Cab Booking Chatbot in Java (`CabBooking.java`) inside `October/Day02_Task2`, utilizing predefined routes, per-kilometer rate matrices, robust user input handling with `Scanner`, infinite menu iteration (`while (true)` with `break` on exit), pre-OTP cancellation mechanisms, and secure 4-digit OTP generation with an irreversible ride-locking policy.
+- **Problem Statement:**
+  Develop a conversational command-line chatbot for on-demand cab reservations. The chatbot must guide the user step-by-step through cab type selection, predefined route selection, transparent fare calculation, booking confirmation or cancellation, and OTP generation. The application must be resilient against invalid inputs (letters, non-numeric strings, empty lines) by reading selections as strings to prevent program crashes. It must provide a cancellation option prior to OTP generation, but once confirmed, issue a random 4-digit OTP and enforce the rule: *"Once the OTP is shared, the ride cannot be cancelled."* Code must adhere to clean engineering guidelines with zero comments and minimal standard library dependencies (`java.util.Scanner`, `java.util.Random`).
+- **Objective:** Master interactive console input handling, loop-based state machine architecture (`while (true)` with `break` and `continue`), multi-branch conditional logic, robust String parsing, and pseudo-random number generation for OTP workflows.
+- **Requirements:**
+  - Create a single Java file: `October/Day02_Task2/CabBooking.java` (`public class CabBooking`).
+  - Store predefined routes with fixed distances:
+    1. Pune Station to Shivajinagar (5 km)
+    2. Swargate to Kothrud (8 km)
+    3. Hinjawadi to Wakad (10 km)
+  - Store predefined cab categories and per-km pricing:
+    1. Auto (Rs. 12/km)
+    2. Sedan (Rs. 18/km)
+    3. SUV (Rs. 25/km)
+  - Use integer arithmetic (`int`) for distances, rates, and total fare (`fare = ratePerKm * distance`).
+  - Display monetary values using the "Rs." prefix without unicode currency symbols.
+  - Implement a central `while (true)` loop for the main menu offering "1. Book Ride" and "2. Exit".
+  - Read all inputs via a single `Scanner` using `scanner.nextLine()` with String comparisons (e.g. `.equals("1")`) to guarantee crash immunity.
+  - Gracefully handle invalid selections across all menu levels by displaying descriptive error messages and resetting to the main menu.
+  - Provide a cancellation checkpoint before OTP issuance ("1. Confirm & Share OTP", "2. Cancel Ride").
+  - On confirmation, generate a random 4-digit OTP (1000–9999) using `java.util.Random` and display the explicit non-cancellation policy: *"Once the OTP is shared, the ride cannot be cancelled."*
+  - Ensure clean code standards with zero comments (`//`, `/* */`, or Javadoc).
+- **Solution & Implementation Approach:**
+  - Structured `CabBooking.java` with parallel arrays to hold cab categories (`{"Auto", "Sedan", "SUV"}`), per-km tariff rates (`{12, 18, 25}`), route source locations, destinations, and corresponding kilometer distances (`{5, 8, 10}`).
+  - Structured the program lifecycle around an infinite `while (true)` loop acting as a conversational state machine.
+  - Utilized `scanner.nextLine().trim()` on a single `Scanner` instance for all user interactions, avoiding scanner buffer desynchronization issues and handling non-numeric or blank inputs gracefully.
+  - Designed the reservation pipeline into sequential phases:
+    1. **Main Navigation:** Routes user to ride booking or exits loop via `break`.
+    2. **Vehicle Category Selection:** Maps choice `1..3` to array index; routes invalid choices back to the main loop with `continue`.
+    3. **Route Selection:** Maps choice `1..3` to source, destination, and distance metrics.
+    4. **Fare Computation & Summary:** Multiplies rate by distance, presenting an itemized summary (Cab Type, Source, Destination, Distance, Rate, Total Fare).
+    5. **Pre-OTP Confirmation / Cancellation Gate:** Offers explicit confirmation or cancellation. If cancelled, logs a cancellation notice and returns to main menu with zero OTP exposure.
+    6. **OTP Generation & Ride Lock:** Uses `1000 + random.nextInt(9000)` to securely issue a 4-digit pin, outputting the mandatory rule *"Once the OTP is shared, the ride cannot be cancelled."* and confirming booking.
+    7. **Clean Exit:** Breaks from the loop and prints a friendly departure message.
+- **Work Done:**
+  - Created `CabBooking.java` within `October/Day02_Task2/`.
+  - Removed obsolete `.gitkeep` placeholder file.
+  - Verified compilation with `javac` and executed end-to-end regression tests across all 5 mandatory scenarios.
+  - Cleaned up all `.class` artifacts to maintain repository cleanliness.
+
+| File | Task | Purpose |
+|:---|:---|:---|
+| `CabBooking.java` | Day 02 — Task 2 | Interactive console cab booking chatbot featuring crash-safe menu navigation, route-based fare calculation, pre-OTP cancellation, and OTP lock mechanism. |
+
+  **Predefined Data Matrices:**
+
+| Category | Type | Rate / km |
+|:---|:---|:---|
+| 1 | Auto | Rs. 12 |
+| 2 | Sedan | Rs. 18 |
+| 3 | SUV | Rs. 25 |
+
+| Route No. | Source | Destination | Distance |
+|:---|:---|:---|:---|
+| 1 | Pune Station | Shivajinagar | 5 km |
+| 2 | Swargate | Kothrud | 8 km |
+| 3 | Hinjawadi | Wakad | 10 km |
+
+- **Sample Output (Successful Booking Flow):**
+
+```text
+=== Cab Booking Chatbot ===
+1. Book Ride
+2. Exit
+Enter your choice: 1
+
+Select Cab Type:
+1. Auto - Rs. 12/km
+2. Sedan - Rs. 18/km
+3. SUV - Rs. 25/km
+Enter choice (1-3): 2
+
+Select Route:
+1. Pune Station to Shivajinagar (5 km)
+2. Swargate to Kothrud (8 km)
+3. Hinjawadi to Wakad (10 km)
+Enter route number (1-3): 3
+
+--- Ride Details ---
+Cab Type: Sedan
+Source: Hinjawadi
+Destination: Wakad
+Distance: 10 km
+Rate: Rs. 18/km
+Total Fare: Rs. 180
+
+1. Confirm & Share OTP
+2. Cancel Ride
+Enter your choice: 1
+
+Your 4-digit OTP is: 3931
+Once the OTP is shared, the ride cannot be cancelled.
+Booking confirmed! Your cab is on the way.
+
+=== Cab Booking Chatbot ===
+1. Book Ride
+2. Exit
+Enter your choice: 2
+Thank you for using Cab Booking Chatbot. Goodbye!
+```
+
+- **Sample Output (Pre-OTP Cancellation Flow):**
+
+```text
+=== Cab Booking Chatbot ===
+1. Book Ride
+2. Exit
+Enter your choice: 1
+
+Select Cab Type:
+1. Auto - Rs. 12/km
+2. Sedan - Rs. 18/km
+3. SUV - Rs. 25/km
+Enter choice (1-3): 1
+
+Select Route:
+1. Pune Station to Shivajinagar (5 km)
+2. Swargate to Kothrud (8 km)
+3. Hinjawadi to Wakad (10 km)
+Enter route number (1-3): 1
+
+--- Ride Details ---
+Cab Type: Auto
+Source: Pune Station
+Destination: Shivajinagar
+Distance: 5 km
+Rate: Rs. 12/km
+Total Fare: Rs. 60
+
+1. Confirm & Share OTP
+2. Cancel Ride
+Enter your choice: 2
+
+Ride cancelled successfully. Returning to main menu.
+
+=== Cab Booking Chatbot ===
+1. Book Ride
+2. Exit
+Enter your choice: 2
+Thank you for using Cab Booking Chatbot. Goodbye!
+```
+
+- **Test Scenarios Verified:**
+  - **Sample Booking Scenario:** `1 -> 2 -> 3 -> 1 -> 2` (Sedan, Hinjawadi to Wakad, 10 km, fare Rs. 180, OTP generated, lock rule displayed, clean exit).
+  - **Cancellation Scenario:** `1 -> 1 -> 1 -> 2 -> 2` (Auto, Pune Station to Shivajinagar, fare Rs. 60, cancelled cleanly with NO OTP generated).
+  - **Invalid Main Menu Input:** `abc -> 5 -> 2` (Proper error messages displayed without program termination or exceptions).
+  - **Invalid Cab Selection:** `1 -> 9 -> 2` (Error prompt displayed, gracefully returned to main menu).
+  - **Multiple Consecutive Bookings:** `1 -> 3 -> 2 -> 1 -> 1 -> 2 -> 1 -> 2 -> 2` (First ride booked with OTP, second ride cancelled, session exited cleanly).
+- **Concepts Learned:**
+  - Interactive console application architecture using `java.util.Scanner`.
+  - Defensive input handling using `nextLine()` and `.equals()` to prevent `InputMismatchException`.
+  - Infinite loop control flow patterns using `while (true)`, `break`, and `continue`.
+  - Data structure mapping using indexed parallel arrays.
+  - Pseudo-random number generation using `java.util.Random` for bounded ranges (`1000..9999`).
+  - Business workflow simulation: pre-authorization cancellation versus irrevocable OTP lock states.
+  - Zero-comment clean coding practices.
+- **Status:** Completed and Verified
+
+---
+
 ## 4. Key Learnings of the Month
 
 - Java runtime configuration and development environment setup with JDK 17 and Antigravity IDE.
-- Practical understanding of Java syntax, data types, arithmetic operators, and explicit type conversion.
+- Practical understanding of Java syntax, primitive data types, arithmetic operators, and explicit type conversion.
 - Designing modular, parameterized methods with return values to cleanly separate computation from output.
 - Formatting floating-point numbers to fixed decimal places using `printf` specifiers.
+- Interactive console application design with `java.util.Scanner` and defensive String-based input evaluation to prevent crashes.
+- State-machine control flow modeling using infinite loops (`while (true)`) paired with `break` and `continue` statements.
+- Pseudo-random number generation using `java.util.Random` for security workflows such as OTP generation.
 - Implementing structured folder conventions for multi-day internship coursework.
 - Utilizing Git for local version tracking, atomic commits, and synchronization with GitHub repositories.
 
