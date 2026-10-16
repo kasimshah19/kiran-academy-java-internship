@@ -351,6 +351,96 @@ Enter your choice: 2
 Thank you for using Cab Booking Chatbot. Goodbye!
 ```
 
+- **Sample Output (Invalid Input Handling & Safe Recovery):**
+
+```text
+=== Cab Booking Chatbot ===
+1. Book Ride
+2. Exit
+Enter your choice: 5
+Invalid choice. Please enter 1 or 2.
+
+=== Cab Booking Chatbot ===
+1. Book Ride
+2. Exit
+Enter your choice: 2
+Thank you for using Cab Booking Chatbot. Goodbye!
+```
+
+- **Sample Output (Consecutive Sessions — Booking Followed by Cancellation):**
+
+```text
+=== Cab Booking Chatbot ===
+1. Book Ride
+2. Exit
+Enter your choice: 1
+
+Select Cab Type:
+1. Auto - Rs. 12/km
+2. Sedan - Rs. 18/km
+3. SUV - Rs. 25/km
+Enter choice (1-3): 3
+
+Select Route:
+1. Pune Station to Shivajinagar (5 km)
+2. Swargate to Kothrud (8 km)
+3. Hinjawadi to Wakad (10 km)
+Enter route number (1-3): 2
+
+--- Ride Details ---
+Cab Type: SUV
+Source: Swargate
+Destination: Kothrud
+Distance: 8 km
+Rate: Rs. 25/km
+Total Fare: Rs. 200
+
+1. Confirm & Share OTP
+2. Cancel Ride
+Enter your choice: 1
+
+Your 4-digit OTP is: 2338
+Once the OTP is shared, the ride cannot be cancelled.
+Booking confirmed! Your cab is on the way.
+
+=== Cab Booking Chatbot ===
+1. Book Ride
+2. Exit
+Enter your choice: 1
+
+Select Cab Type:
+1. Auto - Rs. 12/km
+2. Sedan - Rs. 18/km
+3. SUV - Rs. 25/km
+Enter choice (1-3): 2
+
+Select Route:
+1. Pune Station to Shivajinagar (5 km)
+2. Swargate to Kothrud (8 km)
+3. Hinjawadi to Wakad (10 km)
+Enter route number (1-3): 1
+
+--- Ride Details ---
+Cab Type: Sedan
+Source: Pune Station
+Destination: Shivajinagar
+Distance: 5 km
+Rate: Rs. 18/km
+Total Fare: Rs. 90
+
+1. Confirm & Share OTP
+2. Cancel Ride
+Enter your choice: 2
+
+Ride cancelled successfully. Returning to main menu.
+
+=== Cab Booking Chatbot ===
+1. Book Ride
+2. Exit
+Enter your choice: 2
+Thank you for using Cab Booking Chatbot. Goodbye!
+```
+
 - **Test Scenarios Verified:**
   - **Sample Booking Scenario:** `1 -> 2 -> 3 -> 1 -> 2` (Sedan, Hinjawadi to Wakad, 10 km, fare Rs. 180, OTP generated, lock rule displayed, clean exit).
   - **Cancellation Scenario:** `1 -> 1 -> 1 -> 2 -> 2` (Auto, Pune Station to Shivajinagar, fare Rs. 60, cancelled cleanly with NO OTP generated).
