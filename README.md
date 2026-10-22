@@ -1,4 +1,4 @@
-# <div align="center">🚀 Full Stack Java Developer Internship — The Kiran Academy</div>
+# <div align="center">☕ Full Stack Java Developer Internship — The Kiran Academy</div>
 
 <div align="center">
 
