@@ -1,4 +1,4 @@
-# <div align="center">☕ Full Stack Java Developer Internship — The Kiran Academy</div>
+<h1 align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="38" height="38" style="vertical-align: middle;" /> Full Stack Java Developer Internship — The Kiran Academy</h1>
 
 <div align="center">
 
@@ -43,7 +43,7 @@ flowchart TD
     end
 
     subgraph Backend["⚙️ 2. Back-end"]
-        BE1["Core Java ☕"]
+        BE1["Core Java"]
         BE2["Servlets 🌐"]
         BE3["JSP 📑"]
         BE4["Spring Framework 🍃"]
@@ -106,7 +106,7 @@ flowchart TD
 
 The backend track forms the backbone of the internship, progressing from raw Java fundamentals to enterprise-grade Spring Boot microservices.
 
-#### ☕ A. Core Java
+#### <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="20" height="20" style="vertical-align: middle;" /> A. Core Java
 - **Language Fundamentals:** JVM architecture, Bytecode execution, ClassLoader subsystem, Memory Allocation (Heap vs. Stack vs. Metaspace).
 - **Data Types & Operators:** Primitives, Wrappers, Autoboxing/Unboxing, Arithmetic/Bitwise/Logical operators, Type Casting.
 - **Control Flow & Logic Building:** Decision making (`if-else`, modern switch), Looping (`for`, `while`, `do-while`), Nested iterations, Number theory algorithms.
