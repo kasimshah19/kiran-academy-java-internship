@@ -1,0 +1,70 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: flight-booking-system
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/flightbooking}
+    username: ${SPRING_DATASOURCE_USERNAME:flightuser}
+    password: ${SPRING_DATASOURCE_PASSWORD:flightpass}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000
+      pool-name: FlightBookingHikariPool
+      max-lifetime: 1800000
+      connection-timeout: 30000
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        jdbc:
+          batch_size: 20
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  fare:
+    tax-rate: ${APP_TAX_RATE:0.05}
+    service-fee: ${APP_SERVICE_FEE:50.00}
+    student-discount-percent: 10.0
+    regular-discount-percent: 0.0
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: alpha
+    tags-sorter: alpha
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: when-authorized
+
+logging:
+  level:
+    root: INFO
+    com.kiran.flightbooking: DEBUG
+    org.springframework.security: INFO
+    org.hibernate.SQL: WARN
