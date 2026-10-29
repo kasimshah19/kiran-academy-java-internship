@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Applications | Recruitment &amp; Placement Management System</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-backdrop" aria-hidden="true"></label>
   <header class="app-header">
     <div class="header-left">
-      <label for="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle menu">
+      <label for="nav-toggle" class="hamburger-btn" aria-label="Toggle navigation">
         <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </label>
       <a href="dashboard.html" class="header-brand">
@@ -151,7 +152,7 @@
               </select>
             </div>
             <div class="form-group">
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+              <div class="date-range-grid">
                 <div>
                   <label for="dateFrom">Date From</label>
                   <input type="date" id="dateFrom" name="dateFrom">
@@ -171,7 +172,7 @@
       </section>
       <section class="card">
         <h2 class="card-title">Applications Directory</h2>
-        <div class="table-wrap">
+        <div class="table-wrap table-wide">
           <table>
             <thead>
               <tr>
