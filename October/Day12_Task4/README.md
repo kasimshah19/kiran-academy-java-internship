@@ -28,6 +28,7 @@ To view the prototype:
 
 ```
 October/Day12_Task4/
+  favicon.ico
   login.html
   dashboard.html
   candidates.html
@@ -43,6 +44,10 @@ October/Day12_Task4/
   README.md
   css/style.css
   images/logo.png
+  images/favicon.svg
+  images/favicon-16x16.png
+  images/favicon-32x32.png
+  images/apple-touch-icon.png
 ```
 
 ## Notice
