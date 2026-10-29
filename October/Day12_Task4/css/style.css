@@ -1217,6 +1217,46 @@ body.login-body .app-main {
   text-decoration: underline;
 }
 
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay:target {
+  display: flex;
+}
+
+.modal-card {
+  background: var(--surface);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+  width: 100%;
+  max-width: 400px;
+  padding: 24px;
+}
+
+.modal-close {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--text);
+}
+
 @media (max-width: 1024px) {
   .summary-grid-8 {
     grid-template-columns: repeat(2, 1fr);
