@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interviews | Recruitment &amp; Placement Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
+  <header class="app-header">
+    <div class="header-left">
+      <label for="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </label>
+      <a href="dashboard.html" class="header-brand">
+        <img src="images/logo.png" alt="Kiran Academy Logo" class="header-logo">
+        <span class="header-title">Recruitment &amp; Placement Management System</span>
+      </a>
+    </div>
+    <div class="header-right">
+      <div class="user-chip">
+        <div class="user-avatar">AS</div>
+        <div class="user-info">
+          <span class="user-name">Anita Sharma</span>
+          <span class="user-role">Recruiter</span>
+        </div>
+      </div>
+      <a href="login.html" class="header-logout">Logout</a>
+    </div>
+  </header>
+  <div class="app-layout">
+    <aside class="app-sidebar">
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="candidates.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span>Candidates</span>
+        </a>
+        <a href="companies.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="9" y1="6" x2="9" y2="6.01"></line><line x1="15" y1="6" x2="15" y2="6.01"></line><line x1="9" y1="10" x2="9" y2="10.01"></line><line x1="15" y1="10" x2="15" y2="10.01"></line><line x1="9" y1="14" x2="9" y2="14.01"></line><line x1="15" y1="14" x2="15" y2="14.01"></line><line x1="9" y1="18" x2="15" y2="18"></line></svg>
+          <span>Companies</span>
+        </a>
+        <a href="jobs.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
+          <span>Jobs</span>
+        </a>
+        <a href="applications.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Applications</span>
+        </a>
+        <a href="interviews.html" class="sidebar-link active">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>Interviews</span>
+        </a>
+        <a href="placement-process.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          <span>Placement Process</span>
+        </a>
+        <a href="reports.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <span>Reports</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+    <main class="app-main">
+      <nav class="breadcrumb">
+        <a href="dashboard.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Interviews</span>
+      </nav>
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Interviews</h1>
+          <p class="page-subtitle">Coordinate evaluation rounds, schedule panels, and record attendance outcomes</p>
+        </div>
+      </div>
+      <section class="summary-grid">
+        <div class="summary-card accent-primary">
+          <div class="summary-info">
+            <span class="summary-value">14</span>
+            <span class="summary-label">Today</span>
+          </div>
+          <div class="summary-icon icon-grad-blue">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg>
+          </div>
+        </div>
+        <div class="summary-card accent-warning">
+          <div class="summary-info">
+            <span class="summary-value">22</span>
+            <span class="summary-label">Upcoming</span>
+          </div>
+          <div class="summary-icon icon-grad-amber">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+        </div>
+        <div class="summary-card accent-success">
+          <div class="summary-info">
+            <span class="summary-value">96</span>
+            <span class="summary-label">Completed</span>
+          </div>
+          <div class="summary-icon icon-grad-green">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+        </div>
+        <div class="summary-card accent-danger">
+          <div class="summary-info">
+            <span class="summary-value">4</span>
+            <span class="summary-label">No Show</span>
+          </div>
+          <div class="summary-icon icon-grad-red">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <h2 class="card-title">Schedule Interview</h2>
+        <form>
+          <div class="form-grid-4">
+            <div class="form-group">
+              <label for="candidateSelect">Candidate <span class="required">*</span></label>
+              <select id="candidateSelect" name="candidate" required>
+                <option value="Rahul Patil" selected>Rahul Patil (CAN1001)</option>
+                <option value="Sneha Kulkarni">Sneha Kulkarni (CAN1002)</option>
+                <option value="Amit Deshmukh">Amit Deshmukh (CAN1003)</option>
+                <option value="Priya Joshi">Priya Joshi (CAN1004)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="companySelect">Company <span class="required">*</span></label>
+              <select id="companySelect" name="company" required>
+                <option value="Infosys" selected>Infosys</option>
+                <option value="TCS">TCS</option>
+                <option value="Persistent Systems">Persistent Systems</option>
+                <option value="Wipro">Wipro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="jobSelect">Job <span class="required">*</span></label>
+              <select id="jobSelect" name="job" required>
+                <option value="JOB-2026-001" selected>JOB-2026-001 - Associate Java Developer</option>
+                <option value="JOB-2026-002">JOB-2026-002 - Python Developer</option>
+                <option value="JOB-2026-003">JOB-2026-003 - Software Tester</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="roundSelect">Interview Round <span class="required">*</span></label>
+              <select id="roundSelect" name="round" required>
+                <option value="Aptitude">Aptitude</option>
+                <option value="Technical" selected>Technical</option>
+                <option value="Managerial">Managerial</option>
+                <option value="HR">HR</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="interviewDate">Interview Date <span class="required">*</span></label>
+              <input type="date" id="interviewDate" name="interviewDate" value="2026-10-01" class="input-error" required>
+              <span class="field-error">Interview date cannot be in the past.</span>
+            </div>
+            <div class="form-group">
+              <label for="interviewTime">Interview Time <span class="required">*</span></label>
+              <input type="time" id="interviewTime" name="interviewTime" value="11:30" required>
+            </div>
+            <div class="form-group">
+              <label for="modeSelect">Mode <span class="required">*</span></label>
+              <select id="modeSelect" name="mode" required>
+                <option value="Online" selected>Online</option>
+                <option value="Offline">Offline</option>
+                <option value="Telephonic">Telephonic</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="interviewerName">Interviewer Name</label>
+              <input type="text" id="interviewerName" name="interviewer" value="Sanjay Mathur">
+            </div>
+          </div>
+          <div class="form-actions" style="margin-top: 16px;">
+            <button type="button" class="btn btn-primary">Schedule Interview</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+        </form>
+      </section>
+      <section class="card">
+        <h2 class="card-title">Filter Interviews</h2>
+        <form>
+          <div class="form-grid-4">
+            <div class="form-group">
+              <label for="filterCandidate">Candidate</label>
+              <input type="text" id="filterCandidate" name="candidate" placeholder="Search candidate">
+            </div>
+            <div class="form-group">
+              <label for="filterCompany">Company</label>
+              <input type="text" id="filterCompany" name="company" placeholder="Search company">
+            </div>
+            <div class="form-group">
+              <label for="filterRound">Round</label>
+              <select id="filterRound" name="round">
+                <option value="">All Rounds</option>
+                <option value="Aptitude">Aptitude</option>
+                <option value="Technical">Technical</option>
+                <option value="Managerial">Managerial</option>
+                <option value="HR">HR</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="filterStatus">Status</label>
+              <select id="filterStatus" name="status">
+                <option value="">All Statuses</option>
+                <option value="SCHEDULED">SCHEDULED</option>
+                <option value="COMPLETED">COMPLETED</option>
+                <option value="RESCHEDULED">RESCHEDULED</option>
+                <option value="NO_SHOW">NO_SHOW</option>
+                <option value="CANCELLED">CANCELLED</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions" style="margin-top: 16px;">
+            <button type="button" class="btn btn-primary">Search</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+        </form>
+      </section>
+      <section class="card">
+        <h2 class="card-title">Interview Schedules</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Interview ID</th>
+                <th>Candidate</th>
+                <th>Company</th>
+                <th>Job</th>
+                <th>Round</th>
+                <th>Date &amp; Time</th>
+                <th>Mode</th>
+                <th>Interviewer</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>INT1008</strong></td>
+                <td><a href="candidate-details.html">Rahul Patil</a></td>
+                <td>Infosys</td>
+                <td>JOB-2026-001</td>
+                <td>Technical</td>
+                <td>03-Nov-2026 11:30 AM</td>
+                <td><span class="badge badge-blue">ONLINE</span></td>
+                <td>Sanjay Mathur</td>
+                <td><span class="badge badge-blue">SCHEDULED</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <button type="button" class="btn btn-secondary btn-sm">Reschedule</button>
+                    <a href="placement-process.html" class="btn btn-primary btn-sm">Add Feedback</a>
+                    <button type="button" class="btn btn-danger btn-sm">Mark No Show</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>INT1003</strong></td>
+                <td><a href="candidate-details.html">Sneha Kulkarni</a></td>
+                <td>Infosys</td>
+                <td>JOB-2026-001</td>
+                <td>HR</td>
+                <td>03-Nov-2026 02:00 PM</td>
+                <td><span class="badge badge-blue">ONLINE</span></td>
+                <td>Anjali Mehta</td>
+                <td><span class="badge badge-blue">SCHEDULED</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <button type="button" class="btn btn-secondary btn-sm">Reschedule</button>
+                    <a href="placement-process.html" class="btn btn-primary btn-sm">Add Feedback</a>
+                    <button type="button" class="btn btn-danger btn-sm">Mark No Show</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>INT1004</strong></td>
+                <td><a href="candidate-details.html">Rahul Patil</a></td>
+                <td>TCS</td>
+                <td>JOB-2026-007</td>
+                <td>HR</td>
+                <td>12-Oct-2026 02:00 PM</td>
+                <td><span class="badge badge-grey">OFFLINE</span></td>
+                <td>Ramesh Patil</td>
+                <td><span class="badge badge-green">COMPLETED</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <button type="button" class="btn btn-secondary btn-sm">Reschedule</button>
+                    <a href="placement-process.html" class="btn btn-primary btn-sm">Add Feedback</a>
+                    <button type="button" class="btn btn-danger btn-sm">Mark No Show</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>INT1005</strong></td>
+                <td><a href="candidate-details.html">Priya Joshi</a></td>
+                <td>Wipro</td>
+                <td>JOB-2026-004</td>
+                <td>Technical</td>
+                <td>18-Oct-2026 10:30 AM</td>
+                <td><span class="badge badge-blue">ONLINE</span></td>
+                <td>Deepak Shastry</td>
+                <td><span class="badge badge-green">COMPLETED</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <button type="button" class="btn btn-secondary btn-sm">Reschedule</button>
+                    <a href="placement-process.html" class="btn btn-primary btn-sm">Add Feedback</a>
+                    <button type="button" class="btn btn-danger btn-sm">Mark No Show</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>INT1006</strong></td>
+                <td><a href="candidate-details.html">Amit Deshmukh</a></td>
+                <td>Persistent Systems</td>
+                <td>JOB-2026-003</td>
+                <td>Aptitude</td>
+                <td>28-Oct-2026 03:00 PM</td>
+                <td><span class="badge badge-blue">ONLINE</span></td>
+                <td>Vinay Roy</td>
+                <td><span class="badge badge-red">NO_SHOW</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <button type="button" class="btn btn-secondary btn-sm">Reschedule</button>
+                    <a href="placement-process.html" class="btn btn-primary btn-sm">Add Feedback</a>
+                    <button type="button" class="btn btn-danger btn-sm">Mark No Show</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>INT1007</strong></td>
+                <td><a href="candidate-details.html">Vikas More</a></td>
+                <td>Infosys</td>
+                <td>JOB-2026-001</td>
+                <td>Technical</td>
+                <td>04-Nov-2026 10:00 AM</td>
+                <td><span class="badge badge-grey">OFFLINE</span></td>
+                <td>Sanjay Mathur</td>
+                <td><span class="badge badge-amber">RESCHEDULED</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <button type="button" class="btn btn-secondary btn-sm">Reschedule</button>
+                    <a href="placement-process.html" class="btn btn-primary btn-sm">Add Feedback</a>
+                    <button type="button" class="btn btn-danger btn-sm">Mark No Show</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>INT1009</strong></td>
+                <td><a href="candidate-details.html">Rohan Shinde</a></td>
+                <td>Persistent Systems</td>
+                <td>JOB-2026-003</td>
+                <td>Managerial</td>
+                <td>27-Oct-2026 04:00 PM</td>
+                <td><span class="badge badge-amber">TELEPHONIC</span></td>
+                <td>Sunita Rao</td>
+                <td><span class="badge badge-red">CANCELLED</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <button type="button" class="btn btn-secondary btn-sm">Reschedule</button>
+                    <a href="placement-process.html" class="btn btn-primary btn-sm">Add Feedback</a>
+                    <button type="button" class="btn btn-danger btn-sm">Mark No Show</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <footer class="app-footer">Kiran Academy | Recruitment &amp; Placement Management System</footer>
+    </main>
+  </div>
+</body>
+</html>
+

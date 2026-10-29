@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports | Recruitment &amp; Placement Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
+  <header class="app-header">
+    <div class="header-left">
+      <label for="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </label>
+      <a href="dashboard.html" class="header-brand">
+        <img src="images/logo.png" alt="Kiran Academy Logo" class="header-logo">
+        <span class="header-title">Recruitment &amp; Placement Management System</span>
+      </a>
+    </div>
+    <div class="header-right">
+      <div class="user-chip">
+        <div class="user-avatar">AS</div>
+        <div class="user-info">
+          <span class="user-name">Anita Sharma</span>
+          <span class="user-role">Recruiter</span>
+        </div>
+      </div>
+      <a href="login.html" class="header-logout">Logout</a>
+    </div>
+  </header>
+  <div class="app-layout">
+    <aside class="app-sidebar">
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="candidates.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span>Candidates</span>
+        </a>
+        <a href="companies.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="9" y1="6" x2="9" y2="6.01"></line><line x1="15" y1="6" x2="15" y2="6.01"></line><line x1="9" y1="10" x2="9" y2="10.01"></line><line x1="15" y1="10" x2="15" y2="10.01"></line><line x1="9" y1="14" x2="9" y2="14.01"></line><line x1="15" y1="14" x2="15" y2="14.01"></line><line x1="9" y1="18" x2="15" y2="18"></line></svg>
+          <span>Companies</span>
+        </a>
+        <a href="jobs.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
+          <span>Jobs</span>
+        </a>
+        <a href="applications.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Applications</span>
+        </a>
+        <a href="interviews.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>Interviews</span>
+        </a>
+        <a href="placement-process.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          <span>Placement Process</span>
+        </a>
+        <a href="reports.html" class="sidebar-link active">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <span>Reports</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+    <main class="app-main">
+      <nav class="breadcrumb">
+        <a href="dashboard.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Reports</span>
+      </nav>
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Reports</h1>
+          <p class="page-subtitle">Placement analytics, conversion ratios, partner statistics, and recruiter KPIs</p>
+        </div>
+        <div class="page-actions">
+          <button type="button" class="btn btn-secondary">Print / Export</button>
+        </div>
+      </div>
+      <section class="card">
+        <h2 class="card-title">Report Filters</h2>
+        <form>
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label for="reportDateFrom">Date From</label>
+              <input type="date" id="reportDateFrom" name="dateFrom" value="2026-09-01">
+            </div>
+            <div class="form-group">
+              <label for="reportDateTo">Date To</label>
+              <input type="date" id="reportDateTo" name="dateTo" value="2026-10-31">
+            </div>
+            <div class="form-group">
+              <label for="reportTech">Technology</label>
+              <select id="reportTech" name="technology">
+                <option value="">All Technologies</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="Testing">Testing</option>
+                <option value="Data Analytics">Data Analytics</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="reportCompany">Company</label>
+              <select id="reportCompany" name="company">
+                <option value="">All Companies</option>
+                <option value="Infosys">Infosys</option>
+                <option value="TCS">TCS</option>
+                <option value="Wipro">Wipro</option>
+                <option value="Persistent Systems">Persistent Systems</option>
+                <option value="Zensar Technologies">Zensar Technologies</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="reportRecruiter">Recruiter</label>
+              <select id="reportRecruiter" name="recruiter">
+                <option value="">All Recruiters</option>
+                <option value="Anita Sharma">Anita Sharma</option>
+                <option value="Rajesh Khot">Rajesh Khot</option>
+                <option value="Sunita Rao">Sunita Rao</option>
+                <option value="Manoj Tiwari">Manoj Tiwari</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="reportYear">Passing Year</label>
+              <select id="reportYear" name="passingYear">
+                <option value="">All Years</option>
+                <option value="2024">2024</option>
+                <option value="2025" selected>2025</option>
+                <option value="2026">2026</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions" style="margin-top: 16px;">
+            <button type="button" class="btn btn-primary">Apply Filters</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+        </form>
+      </section>
+      <section class="summary-grid" style="grid-template-columns: repeat(5, 1fr);">
+        <div class="summary-card accent-primary">
+          <div class="summary-info">
+            <span class="summary-value">1,200</span>
+            <span class="summary-label">Applications</span>
+          </div>
+          <div class="summary-icon icon-grad-blue">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          </div>
+        </div>
+        <div class="summary-card accent-warning">
+          <div class="summary-info">
+            <span class="summary-value">480</span>
+            <span class="summary-label">Interviews</span>
+          </div>
+          <div class="summary-icon icon-grad-amber">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+        </div>
+        <div class="summary-card accent-purple">
+          <div class="summary-info">
+            <span class="summary-value">210</span>
+            <span class="summary-label">Selected</span>
+          </div>
+          <div class="summary-icon icon-grad-purple">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+        </div>
+        <div class="summary-card accent-success">
+          <div class="summary-info">
+            <span class="summary-value">175</span>
+            <span class="summary-label">Joined</span>
+          </div>
+          <div class="summary-icon icon-grad-green">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          </div>
+        </div>
+        <div class="summary-card accent-accent">
+          <div class="summary-info">
+            <span class="summary-value">83.3%</span>
+            <span class="summary-label">Offer-to-Join %</span>
+          </div>
+          <div class="summary-icon icon-grad-teal">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <h2 class="card-title">Recruitment Funnel Conversion</h2>
+        <div class="funnel-container">
+          <div class="funnel-stage">
+            <div class="funnel-stage-header">
+              <span>Applications</span>
+              <span>1,200</span>
+            </div>
+            <div class="funnel-bar-bg">
+              <div class="funnel-bar-fill" style="width: 100%; background: linear-gradient(90deg, #2563EB, #3B82F6);">1,200 (100%)</div>
+            </div>
+          </div>
+          <div class="funnel-stage">
+            <div class="funnel-stage-header">
+              <span>Shortlisted</span>
+              <span>760</span>
+            </div>
+            <div class="funnel-bar-bg">
+              <div class="funnel-bar-fill" style="width: 63.3%; background: linear-gradient(90deg, #0D9488, #14B8A6);">760 (63.3%)</div>
+            </div>
+          </div>
+          <div class="funnel-stage">
+            <div class="funnel-stage-header">
+              <span>Interviewed</span>
+              <span>480</span>
+            </div>
+            <div class="funnel-bar-bg">
+              <div class="funnel-bar-fill" style="width: 40%; background: linear-gradient(90deg, #7C3AED, #A855F7);">480 (40.0%)</div>
+            </div>
+          </div>
+          <div class="funnel-stage">
+            <div class="funnel-stage-header">
+              <span>Selected</span>
+              <span>210</span>
+            </div>
+            <div class="funnel-bar-bg">
+              <div class="funnel-bar-fill" style="width: 17.5%; background: linear-gradient(90deg, #D97706, #F59E0B);">210 (17.5%)</div>
+            </div>
+          </div>
+          <div class="funnel-stage">
+            <div class="funnel-stage-header">
+              <span>Joined</span>
+              <span>175</span>
+            </div>
+            <div class="funnel-bar-bg">
+              <div class="funnel-bar-fill" style="width: 14.6%; background: linear-gradient(90deg, #16A34A, #22C55E);">175 (14.6%)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="form-grid-2">
+        <section class="card">
+          <h2 class="card-title">Company-wise Placement</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Joined</th>
+                  <th>Distribution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Infosys</strong></td>
+                  <td>58</td>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <div class="progress-track" style="flex: 1;">
+                        <div class="progress-fill" style="width: 33.1%;"></div>
+                      </div>
+                      <span style="font-size: 12px; color: var(--muted); min-width: 38px;">33.1%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>TCS</strong></td>
+                  <td>52</td>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <div class="progress-track" style="flex: 1;">
+                        <div class="progress-fill" style="width: 29.7%;"></div>
+                      </div>
+                      <span style="font-size: 12px; color: var(--muted); min-width: 38px;">29.7%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Wipro</strong></td>
+                  <td>34</td>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <div class="progress-track" style="flex: 1;">
+                        <div class="progress-fill" style="width: 19.4%;"></div>
+                      </div>
+                      <span style="font-size: 12px; color: var(--muted); min-width: 38px;">19.4%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Persistent Systems</strong></td>
+                  <td>20</td>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <div class="progress-track" style="flex: 1;">
+                        <div class="progress-fill" style="width: 11.4%;"></div>
+                      </div>
+                      <span style="font-size: 12px; color: var(--muted); min-width: 38px;">11.4%</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Zensar Technologies</strong></td>
+                  <td>11</td>
+                  <td>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <div class="progress-track" style="flex: 1;">
+                        <div class="progress-fill" style="width: 6.3%;"></div>
+                      </div>
+                      <span style="font-size: 12px; color: var(--muted); min-width: 38px;">6.3%</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="card">
+          <h2 class="card-title">Technology-wise Placement</h2>
+          <div style="display: flex; flex-direction: column; gap: 16px; padding: 6px 0;">
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; margin-bottom: 4px;">
+                <span>Java</span>
+                <span>82 Placements (46.9%)</span>
+              </div>
+              <div class="funnel-bar-bg" style="height: 20px;">
+                <div class="funnel-bar-fill" style="width: 46.9%; background: #2F5BEA;">82</div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; margin-bottom: 4px;">
+                <span>Python</span>
+                <span>45 Placements (25.7%)</span>
+              </div>
+              <div class="funnel-bar-bg" style="height: 20px;">
+                <div class="funnel-bar-fill" style="width: 25.7%; background: #14B8A6;">45</div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; margin-bottom: 4px;">
+                <span>Testing</span>
+                <span>28 Placements (16.0%)</span>
+              </div>
+              <div class="funnel-bar-bg" style="height: 20px;">
+                <div class="funnel-bar-fill" style="width: 16.0%; background: #D97706;">28</div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; margin-bottom: 4px;">
+                <span>Data Analytics</span>
+                <span>20 Placements (11.4%)</span>
+              </div>
+              <div class="funnel-bar-bg" style="height: 20px;">
+                <div class="funnel-bar-fill" style="width: 11.4%; background: #7C3AED;">20</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="card">
+        <h2 class="card-title">Recruiter Performance</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Recruiter</th>
+                <th>Interviews Scheduled</th>
+                <th>Selections</th>
+                <th>Joinings</th>
+                <th>Conversion %</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Anita Sharma</strong></td>
+                <td>160</td>
+                <td>72</td>
+                <td>62</td>
+                <td><span class="badge badge-green">86.1%</span></td>
+              </tr>
+              <tr>
+                <td><strong>Rajesh Khot</strong></td>
+                <td>140</td>
+                <td>58</td>
+                <td>48</td>
+                <td><span class="badge badge-green">82.8%</span></td>
+              </tr>
+              <tr>
+                <td><strong>Sunita Rao</strong></td>
+                <td>110</td>
+                <td>48</td>
+                <td>39</td>
+                <td><span class="badge badge-green">81.3%</span></td>
+              </tr>
+              <tr>
+                <td><strong>Manoj Tiwari</strong></td>
+                <td>70</td>
+                <td>32</td>
+                <td>26</td>
+                <td><span class="badge badge-green">81.3%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card">
+        <h2 class="card-title">Pending Interviews</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Candidate</th>
+                <th>Company</th>
+                <th>Round</th>
+                <th>Date</th>
+                <th>Interviewer</th>
+                <th>Mode</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="candidate-details.html">Rahul Patil</a></td>
+                <td>Infosys</td>
+                <td>Technical</td>
+                <td>03-Nov-2026</td>
+                <td>Sanjay Mathur</td>
+                <td><span class="badge badge-blue">ONLINE</span></td>
+              </tr>
+              <tr>
+                <td>Sneha Kulkarni</td>
+                <td>Infosys</td>
+                <td>HR</td>
+                <td>03-Nov-2026</td>
+                <td>Anjali Mehta</td>
+                <td><span class="badge badge-blue">ONLINE</span></td>
+              </tr>
+              <tr>
+                <td>Vikas More</td>
+                <td>Persistent Systems</td>
+                <td>Technical</td>
+                <td>04-Nov-2026</td>
+                <td>Sanjay Mathur</td>
+                <td><span class="badge badge-grey">OFFLINE</span></td>
+              </tr>
+              <tr>
+                <td>Saurabh Gaikwad</td>
+                <td>Wipro</td>
+                <td>Managerial</td>
+                <td>04-Nov-2026</td>
+                <td>Deepak Shastry</td>
+                <td><span class="badge badge-blue">ONLINE</span></td>
+              </tr>
+              <tr>
+                <td>Anjali Sawant</td>
+                <td>TCS</td>
+                <td>Aptitude</td>
+                <td>05-Nov-2026</td>
+                <td>Ramesh Patil</td>
+                <td><span class="badge badge-blue">ONLINE</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card">
+        <h2 class="card-title">Open Job Aging</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Job Code</th>
+                <th>Company</th>
+                <th>Title</th>
+                <th>Days Open</th>
+                <th>Openings Left</th>
+                <th>Aging Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="jobs.html">JOB-2026-001</a></td>
+                <td>Infosys</td>
+                <td>Associate Java Developer</td>
+                <td>14 days</td>
+                <td>15 openings</td>
+                <td><span class="badge badge-green">0-15 DAYS</span></td>
+              </tr>
+              <tr>
+                <td><a href="jobs.html">JOB-2026-002</a></td>
+                <td>TCS</td>
+                <td>Python Developer</td>
+                <td>9 days</td>
+                <td>10 openings</td>
+                <td><span class="badge badge-green">0-15 DAYS</span></td>
+              </tr>
+              <tr>
+                <td><a href="jobs.html">JOB-2026-003</a></td>
+                <td>Persistent Systems</td>
+                <td>Software Tester</td>
+                <td>11 days</td>
+                <td>8 openings</td>
+                <td><span class="badge badge-green">0-15 DAYS</span></td>
+              </tr>
+              <tr>
+                <td><a href="jobs.html">JOB-2026-004</a></td>
+                <td>Wipro</td>
+                <td>Data Analyst</td>
+                <td>22 days</td>
+                <td>6 openings</td>
+                <td><span class="badge badge-amber">16-30 DAYS</span></td>
+              </tr>
+              <tr>
+                <td><a href="jobs.html">JOB-2026-005</a></td>
+                <td>Infosys</td>
+                <td>Java Intern</td>
+                <td>19 days</td>
+                <td>20 openings</td>
+                <td><span class="badge badge-amber">16-30 DAYS</span></td>
+              </tr>
+              <tr>
+                <td><a href="jobs.html">JOB-2026-006</a></td>
+                <td>Zensar Technologies</td>
+                <td>Junior Python Developer</td>
+                <td>35 days</td>
+                <td>5 openings</td>
+                <td><span class="badge badge-red">30+ DAYS</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <footer class="app-footer">Kiran Academy | Recruitment &amp; Placement Management System</footer>
+    </main>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companies | Recruitment &amp; Placement Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
+  <header class="app-header">
+    <div class="header-left">
+      <label for="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </label>
+      <a href="dashboard.html" class="header-brand">
+        <img src="images/logo.png" alt="Kiran Academy Logo" class="header-logo">
+        <span class="header-title">Recruitment &amp; Placement Management System</span>
+      </a>
+    </div>
+    <div class="header-right">
+      <div class="user-chip">
+        <div class="user-avatar">AS</div>
+        <div class="user-info">
+          <span class="user-name">Anita Sharma</span>
+          <span class="user-role">Recruiter</span>
+        </div>
+      </div>
+      <a href="login.html" class="header-logout">Logout</a>
+    </div>
+  </header>
+  <div class="app-layout">
+    <aside class="app-sidebar">
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="candidates.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span>Candidates</span>
+        </a>
+        <a href="companies.html" class="sidebar-link active">
+          <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="9" y1="6" x2="9" y2="6.01"></line><line x1="15" y1="6" x2="15" y2="6.01"></line><line x1="9" y1="10" x2="9" y2="10.01"></line><line x1="15" y1="10" x2="15" y2="10.01"></line><line x1="9" y1="14" x2="9" y2="14.01"></line><line x1="15" y1="14" x2="15" y2="14.01"></line><line x1="9" y1="18" x2="15" y2="18"></line></svg>
+          <span>Companies</span>
+        </a>
+        <a href="jobs.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
+          <span>Jobs</span>
+        </a>
+        <a href="applications.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Applications</span>
+        </a>
+        <a href="interviews.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>Interviews</span>
+        </a>
+        <a href="placement-process.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          <span>Placement Process</span>
+        </a>
+        <a href="reports.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <span>Reports</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+    <main class="app-main">
+      <nav class="breadcrumb">
+        <a href="dashboard.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Companies</span>
+      </nav>
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Companies</h1>
+          <p class="page-subtitle">Manage hiring partner profiles, campus recruitment drives, and point of contacts</p>
+        </div>
+        <div class="page-actions">
+          <a href="#company-form" class="btn btn-primary">Add Company</a>
+        </div>
+      </div>
+      <section class="card">
+        <h2 class="card-title">Search &amp; Filter Companies</h2>
+        <form>
+          <div class="form-grid-4">
+            <div class="form-group">
+              <label for="companyNameSearch">Company Name</label>
+              <input type="text" id="companyNameSearch" name="companyName" placeholder="e.g. Infosys, TCS">
+            </div>
+            <div class="form-group">
+              <label for="industrySearch">Industry</label>
+              <input type="text" id="industrySearch" name="industry" placeholder="e.g. IT Services">
+            </div>
+            <div class="form-group">
+              <label for="locationSearch">Location</label>
+              <input type="text" id="locationSearch" name="location" placeholder="e.g. Pune, Mumbai">
+            </div>
+            <div class="form-group">
+              <label for="statusSearch">Status</label>
+              <select id="statusSearch" name="status">
+                <option value="">All Statuses</option>
+                <option value="ACTIVE">ACTIVE</option>
+                <option value="INACTIVE">INACTIVE</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions" style="margin-top: 16px;">
+            <button type="button" class="btn btn-primary">Search</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+        </form>
+      </section>
+      <section class="card">
+        <h2 class="card-title">Corporate Partners Directory</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Company ID</th>
+                <th>Company Name</th>
+                <th>Industry</th>
+                <th>Location</th>
+                <th>HR Name</th>
+                <th>HR Email</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Open Jobs</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>COM101</td>
+                <td><strong>Infosys</strong></td>
+                <td>IT Services</td>
+                <td>Pune</td>
+                <td>Rajesh Sharma</td>
+                <td>rajesh.sharma@demo.com</td>
+                <td>MNC</td>
+                <td><span class="badge badge-green">ACTIVE</span></td>
+                <td><a href="jobs.html">4 Open Jobs</a></td>
+                <td><a href="#company-form" class="btn btn-secondary btn-sm">Edit</a></td>
+              </tr>
+              <tr>
+                <td>COM102</td>
+                <td><strong>TCS</strong></td>
+                <td>IT Services</td>
+                <td>Mumbai</td>
+                <td>Meenakshi Iyer</td>
+                <td>meenakshi.iyer@demo.com</td>
+                <td>MNC</td>
+                <td><span class="badge badge-green">ACTIVE</span></td>
+                <td><a href="jobs.html">3 Open Jobs</a></td>
+                <td><a href="#company-form" class="btn btn-secondary btn-sm">Edit</a></td>
+              </tr>
+              <tr>
+                <td>COM103</td>
+                <td><strong>Persistent Systems</strong></td>
+                <td>Software Products</td>
+                <td>Pune</td>
+                <td>Sunil Kulkarni</td>
+                <td>sunil.kulkarni@demo.com</td>
+                <td>Mid-size</td>
+                <td><span class="badge badge-green">ACTIVE</span></td>
+                <td><a href="jobs.html">2 Open Jobs</a></td>
+                <td><a href="#company-form" class="btn btn-secondary btn-sm">Edit</a></td>
+              </tr>
+              <tr>
+                <td>COM104</td>
+                <td><strong>Wipro</strong></td>
+                <td>IT Services</td>
+                <td>Bengaluru</td>
+                <td>Priya Nair</td>
+                <td>priya.nair@demo.com</td>
+                <td>MNC</td>
+                <td><span class="badge badge-green">ACTIVE</span></td>
+                <td><a href="jobs.html">2 Open Jobs</a></td>
+                <td><a href="#company-form" class="btn btn-secondary btn-sm">Edit</a></td>
+              </tr>
+              <tr>
+                <td>COM105</td>
+                <td><strong>Zensar Technologies</strong></td>
+                <td>Software Services</td>
+                <td>Pune</td>
+                <td>Amit Verma</td>
+                <td>amit.verma@demo.com</td>
+                <td>Mid-size</td>
+                <td><span class="badge badge-green">ACTIVE</span></td>
+                <td><a href="jobs.html">1 Open Job</a></td>
+                <td><a href="#company-form" class="btn btn-secondary btn-sm">Edit</a></td>
+              </tr>
+              <tr>
+                <td>COM106</td>
+                <td><strong>NimbleSoft</strong></td>
+                <td>Software Products</td>
+                <td>Pune</td>
+                <td>Rohit Patil</td>
+                <td>rohit.patil@demo.com</td>
+                <td>Startup</td>
+                <td><span class="badge badge-grey">INACTIVE</span></td>
+                <td><a href="jobs.html">0 Open Jobs</a></td>
+                <td><a href="#company-form" class="btn btn-secondary btn-sm">Edit</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card" id="company-form">
+        <h2 class="card-title">Add / Edit Company Profile</h2>
+        <form>
+          <div class="form-grid-3">
+            <div class="form-group">
+              <label for="companyName">Company Name <span class="required">*</span></label>
+              <input type="text" id="companyName" name="companyName" value="Infosys" required>
+            </div>
+            <div class="form-group">
+              <label for="industry">Industry <span class="required">*</span></label>
+              <input type="text" id="industry" name="industry" value="IT Services" required>
+            </div>
+            <div class="form-group">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" value="https://www.infosys.demo.com">
+            </div>
+            <div class="form-group">
+              <label for="location">Location <span class="required">*</span></label>
+              <input type="text" id="location" name="location" value="Pune, Maharashtra" required>
+            </div>
+            <div class="form-group">
+              <label for="hrName">HR Name <span class="required">*</span></label>
+              <input type="text" id="hrName" name="hrName" value="Rajesh Sharma" required>
+            </div>
+            <div class="form-group">
+              <label for="hrEmail">HR Email <span class="required">*</span></label>
+              <input type="email" id="hrEmail" name="hrEmail" value="rajesh.sharma@demo.com" required>
+            </div>
+            <div class="form-group">
+              <label for="hrMobile">HR Mobile</label>
+              <input type="text" id="hrMobile" name="hrMobile" value="9823012345">
+            </div>
+            <div class="form-group">
+              <label for="companyType">Company Type <span class="required">*</span></label>
+              <select id="companyType" name="companyType" required>
+                <option value="MNC" selected>MNC</option>
+                <option value="Startup">Startup</option>
+                <option value="Mid-size">Mid-size</option>
+                <option value="Consultancy">Consultancy</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="status">Status <span class="required">*</span></label>
+              <select id="status" name="status" required>
+                <option value="ACTIVE" selected>ACTIVE</option>
+                <option value="INACTIVE">INACTIVE</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-primary">Save Company</button>
+            <button type="button" class="btn btn-primary">Update Company</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+        </form>
+      </section>
+      <footer class="app-footer">Kiran Academy | Recruitment &amp; Placement Management System</footer>
+    </main>
+  </div>
+</body>
+</html>
+

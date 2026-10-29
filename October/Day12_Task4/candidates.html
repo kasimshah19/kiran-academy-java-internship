@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidates | Recruitment &amp; Placement Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
+  <header class="app-header">
+    <div class="header-left">
+      <label for="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </label>
+      <a href="dashboard.html" class="header-brand">
+        <img src="images/logo.png" alt="Kiran Academy Logo" class="header-logo">
+        <span class="header-title">Recruitment &amp; Placement Management System</span>
+      </a>
+    </div>
+    <div class="header-right">
+      <div class="user-chip">
+        <div class="user-avatar">AS</div>
+        <div class="user-info">
+          <span class="user-name">Anita Sharma</span>
+          <span class="user-role">Recruiter</span>
+        </div>
+      </div>
+      <a href="login.html" class="header-logout">Logout</a>
+    </div>
+  </header>
+  <div class="app-layout">
+    <aside class="app-sidebar">
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="candidates.html" class="sidebar-link active">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span>Candidates</span>
+        </a>
+        <a href="companies.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="9" y1="6" x2="9" y2="6.01"></line><line x1="15" y1="6" x2="15" y2="6.01"></line><line x1="9" y1="10" x2="9" y2="10.01"></line><line x1="15" y1="10" x2="15" y2="10.01"></line><line x1="9" y1="14" x2="9" y2="14.01"></line><line x1="15" y1="14" x2="15" y2="14.01"></line><line x1="9" y1="18" x2="15" y2="18"></line></svg>
+          <span>Companies</span>
+        </a>
+        <a href="jobs.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
+          <span>Jobs</span>
+        </a>
+        <a href="applications.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Applications</span>
+        </a>
+        <a href="interviews.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>Interviews</span>
+        </a>
+        <a href="placement-process.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          <span>Placement Process</span>
+        </a>
+        <a href="reports.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <span>Reports</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+    <main class="app-main">
+      <nav class="breadcrumb">
+        <a href="dashboard.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Candidates</span>
+      </nav>
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Candidates</h1>
+          <p class="page-subtitle">Manage registered candidate profiles and tracking status</p>
+        </div>
+        <div class="page-actions">
+          <a href="candidate-form.html" class="btn btn-primary">Add Candidate</a>
+        </div>
+      </div>
+      <section class="card">
+        <h2 class="card-title">Filter Candidates</h2>
+        <form>
+          <div class="form-grid-4">
+            <div class="form-group">
+              <label for="filter-id">Candidate ID</label>
+              <input type="text" id="filter-id" name="candidateId" placeholder="e.g. CAN1001">
+            </div>
+            <div class="form-group">
+              <label for="filter-name">Candidate Name</label>
+              <input type="text" id="filter-name" name="name" placeholder="Search by name">
+            </div>
+            <div class="form-group">
+              <label for="filter-mobile">Mobile</label>
+              <input type="text" id="filter-mobile" name="mobile" placeholder="10-digit number">
+            </div>
+            <div class="form-group">
+              <label for="filter-email">Email</label>
+              <input type="text" id="filter-email" name="email" placeholder="e.g. name@demo.com">
+            </div>
+            <div class="form-group">
+              <label for="filter-tech">Technology</label>
+              <select id="filter-tech" name="technology">
+                <option value="">All Technologies</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="Testing">Testing</option>
+                <option value="Data Analytics">Data Analytics</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="filter-year">Passing Year</label>
+              <select id="filter-year" name="passingYear">
+                <option value="">All Years</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="filter-qual">Qualification</label>
+              <select id="filter-qual" name="qualification">
+                <option value="">All Qualifications</option>
+                <option value="BE">BE</option>
+                <option value="BTech">BTech</option>
+                <option value="MCA">MCA</option>
+                <option value="BSc">BSc</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="filter-status">Placement Status</label>
+              <select id="filter-status" name="status">
+                <option value="">All Statuses</option>
+                <option value="Active">Active</option>
+                <option value="Placed">Placed</option>
+                <option value="On Hold">On Hold</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions" style="margin-top: 16px;">
+            <button type="button" class="btn btn-primary">Search</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+        </form>
+      </section>
+      <section class="card">
+        <h2 class="card-title">Candidate Directory</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Candidate ID</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Technology</th>
+                <th>Qualification</th>
+                <th>Passing Year</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CAN1001</td>
+                <td><a href="candidate-details.html">Rahul Patil</a></td>
+                <td>9876543210</td>
+                <td>rahul.patil@demo.com</td>
+                <td>Java</td>
+                <td>BE</td>
+                <td>2025</td>
+                <td><span class="badge badge-green">ACTIVE</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                    <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>CAN1002</td>
+                <td><a href="candidate-details.html">Sneha Kulkarni</a></td>
+                <td>9876543211</td>
+                <td>sneha.kulkarni@demo.com</td>
+                <td>Python</td>
+                <td>BE</td>
+                <td>2025</td>
+                <td><span class="badge badge-green">ACTIVE</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                    <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>CAN1003</td>
+                <td><a href="candidate-details.html">Amit Deshmukh</a></td>
+                <td>9876543212</td>
+                <td>amit.deshmukh@demo.com</td>
+                <td>Testing</td>
+                <td>BTech</td>
+                <td>2024</td>
+                <td><span class="badge badge-amber">ON_HOLD</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                    <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>CAN1004</td>
+                <td><a href="candidate-details.html">Priya Joshi</a></td>
+                <td>9876543213</td>
+                <td>priya.joshi@demo.com</td>
+                <td>Data Analytics</td>
+                <td>MCA</td>
+                <td>2025</td>
+                <td><span class="badge badge-green">PLACED</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                    <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>CAN1005</td>
+                <td><a href="candidate-details.html">Rohan Shinde</a></td>
+                <td>9876543214</td>
+                <td>rohan.shinde@demo.com</td>
+                <td>Java</td>
+                <td>BTech</td>
+                <td>2025</td>
+                <td><span class="badge badge-green">ACTIVE</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                    <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>CAN1006</td>
+                <td><a href="candidate-details.html">Neha Pawar</a></td>
+                <td>9876543215</td>
+                <td>neha.pawar@demo.com</td>
+                <td>Python</td>
+                <td>BSc</td>
+                <td>2024</td>
+                <td><span class="badge badge-green">PLACED</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                    <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>CAN1007</td>
+                <td><a href="candidate-details.html">Vikas More</a></td>
+                <td>9876543216</td>
+                <td>vikas.more@demo.com</td>
+                <td>Java</td>
+                <td>BE</td>
+                <td>2026</td>
+                <td><span class="badge badge-green">ACTIVE</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                    <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>CAN1008</td>
+                <td><a href="candidate-details.html">Pooja Jadhav</a></td>
+                <td>9876543217</td>
+                <td>pooja.jadhav@demo.com</td>
+                <td>Testing</td>
+                <td>MCA</td>
+                <td>2025</td>
+                <td><span class="badge badge-grey">INACTIVE</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                    <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>CAN1009</td>
+                <td><a href="candidate-details.html">Saurabh Gaikwad</a></td>
+                <td>9876543218</td>
+                <td>saurabh.gaikwad@demo.com</td>
+                <td>Data Analytics</td>
+                <td>BE</td>
+                <td>2025</td>
+                <td><span class="badge badge-green">ACTIVE</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                    <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>CAN1010</td>
+                <td><a href="candidate-details.html">Anjali Sawant</a></td>
+                <td>9876543219</td>
+                <td>anjali.sawant@demo.com</td>
+                <td>Java</td>
+                <td>MCA</td>
+                <td>2026</td>
+                <td><span class="badge badge-green">ACTIVE</span></td>
+                <td>
+                  <div class="actions-cell">
+                    <a href="candidate-details.html" class="btn btn-secondary btn-sm">View</a>
+                    <a href="candidate-form.html" class="btn btn-secondary btn-sm">Edit</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <span>Showing 1-10 of 2,450</span>
+          <div class="pagination-links">
+            <a href="#" class="page-link">Previous</a>
+            <a href="#" class="page-link active">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+            <span style="padding: 0 4px;">...</span>
+            <a href="#" class="page-link">245</a>
+            <a href="#" class="page-link">Next</a>
+          </div>
+        </div>
+      </section>
+      <footer class="app-footer">Kiran Academy | Recruitment &amp; Placement Management System</footer>
+    </main>
+  </div>
+</body>
+</html>
+

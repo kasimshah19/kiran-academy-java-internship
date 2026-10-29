@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Form | Recruitment &amp; Placement Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
+  <header class="app-header">
+    <div class="header-left">
+      <label for="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </label>
+      <a href="dashboard.html" class="header-brand">
+        <img src="images/logo.png" alt="Kiran Academy Logo" class="header-logo">
+        <span class="header-title">Recruitment &amp; Placement Management System</span>
+      </a>
+    </div>
+    <div class="header-right">
+      <div class="user-chip">
+        <div class="user-avatar">AS</div>
+        <div class="user-info">
+          <span class="user-name">Anita Sharma</span>
+          <span class="user-role">Recruiter</span>
+        </div>
+      </div>
+      <a href="login.html" class="header-logout">Logout</a>
+    </div>
+  </header>
+  <div class="app-layout">
+    <aside class="app-sidebar">
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="candidates.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span>Candidates</span>
+        </a>
+        <a href="companies.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="9" y1="6" x2="9" y2="6.01"></line><line x1="15" y1="6" x2="15" y2="6.01"></line><line x1="9" y1="10" x2="9" y2="10.01"></line><line x1="15" y1="10" x2="15" y2="10.01"></line><line x1="9" y1="14" x2="9" y2="14.01"></line><line x1="15" y1="14" x2="15" y2="14.01"></line><line x1="9" y1="18" x2="15" y2="18"></line></svg>
+          <span>Companies</span>
+        </a>
+        <a href="jobs.html" class="sidebar-link active">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
+          <span>Jobs</span>
+        </a>
+        <a href="applications.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Applications</span>
+        </a>
+        <a href="interviews.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>Interviews</span>
+        </a>
+        <a href="placement-process.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          <span>Placement Process</span>
+        </a>
+        <a href="reports.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <span>Reports</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="login.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+    <main class="app-main">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <nav class="breadcrumb">
+          <a href="dashboard.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="jobs.html">Jobs</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Job Form</span>
+        </nav>
+        <a href="jobs.html" class="btn btn-secondary btn-sm">&larr; Back to Jobs</a>
+      </div>
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Create / Edit Job</h1>
+          <p class="page-subtitle">Define job profile, openings, eligibility criteria, and drive timeline</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: start;">
+        <form style="display: flex; flex-direction: column; gap: 24px;">
+          <section class="card">
+            <h2 class="card-title">Basic Information</h2>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="companySelect">Company <span class="required">*</span></label>
+                <select id="companySelect" name="company" required>
+                  <option value="Infosys" selected>Infosys</option>
+                  <option value="TCS">TCS</option>
+                  <option value="Persistent Systems">Persistent Systems</option>
+                  <option value="Wipro">Wipro</option>
+                  <option value="Zensar Technologies">Zensar Technologies</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="jobCode">Job Code <span class="required">*</span></label>
+                <input type="text" id="jobCode" name="jobCode" value="JOB-2026-001" required>
+              </div>
+              <div class="form-group">
+                <label for="jobTitle">Job Title <span class="required">*</span></label>
+                <input type="text" id="jobTitle" name="jobTitle" value="Associate Java Developer" required>
+              </div>
+              <div class="form-group">
+                <label for="openings">Number of Openings <span class="required">*</span></label>
+                <input type="number" id="openings" name="openings" value="0" class="input-error" required>
+                <span class="field-error">Number of openings must be greater than zero.</span>
+              </div>
+              <div class="form-group">
+                <label for="empType">Employment Type <span class="required">*</span></label>
+                <select id="empType" name="empType" required>
+                  <option value="Full-time" selected>Full-time</option>
+                  <option value="Internship">Internship</option>
+                  <option value="Contract">Contract</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="jobLocation">Location <span class="required">*</span></label>
+                <input type="text" id="jobLocation" name="location" value="Pune" required>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <h2 class="card-title">Compensation</h2>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="minPackage">Minimum Package</label>
+                <input type="text" id="minPackage" name="minPackage" value="6.5 LPA" class="input-error">
+                <span class="field-error">Minimum package cannot exceed maximum package.</span>
+              </div>
+              <div class="form-group">
+                <label for="maxPackage">Maximum Package</label>
+                <input type="text" id="maxPackage" name="maxPackage" value="4.5 LPA">
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <h2 class="card-title">Eligibility Criteria</h2>
+            <div class="form-grid-2">
+              <div class="form-group" style="grid-column: span 2;">
+                <label>Eligible Qualifications <span class="required">*</span></label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="qualifications" value="BE" checked> BE
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="qualifications" value="BTech" checked> BTech
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="qualifications" value="MCA"> MCA
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="qualifications" value="BSc"> BSc
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="minPercentage">Minimum Percentage <span class="required">*</span></label>
+                <input type="number" id="minPercentage" name="minPercentage" value="60" required>
+              </div>
+              <div class="form-group">
+                <label for="maxBacklogs">Maximum Backlogs <span class="required">*</span></label>
+                <input type="number" id="maxBacklogs" name="maxBacklogs" value="0" required>
+              </div>
+              <div class="form-group">
+                <label for="minPassingYear">Minimum Passing Year</label>
+                <select id="minPassingYear" name="minPassingYear">
+                  <option value="2023">2023</option>
+                  <option value="2024" selected>2024</option>
+                  <option value="2025">2025</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="maxPassingYear">Maximum Passing Year</label>
+                <select id="maxPassingYear" name="maxPassingYear">
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026" selected>2026</option>
+                </select>
+              </div>
+              <div class="form-group" style="grid-column: span 2;">
+                <label for="experienceReq">Experience Required</label>
+                <select id="experienceReq" name="experienceReq">
+                  <option value="Fresher" selected>Fresher (0 years)</option>
+                  <option value="0-1 Years">0-1 Years</option>
+                  <option value="1-2 Years">1-2 Years</option>
+                </select>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <h2 class="card-title">Skills Requirement</h2>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="reqTech">Required Technology <span class="required">*</span></label>
+                <select id="reqTech" name="reqTech" required>
+                  <option value="Java" selected>Java</option>
+                  <option value="Python">Python</option>
+                  <option value="Testing">Testing</option>
+                  <option value="Data Analytics">Data Analytics</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="reqSkills">Required Skills <span class="required">*</span></label>
+                <select id="reqSkills" name="reqSkills" multiple style="height: 90px;" required>
+                  <option value="Core Java" selected>Core Java</option>
+                  <option value="OOP" selected>OOP</option>
+                  <option value="SQL" selected>SQL</option>
+                  <option value="Git" selected>Git</option>
+                  <option value="Web Services">Web Services</option>
+                </select>
+                <span class="field-help">Hold Ctrl to select multiple skills</span>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <h2 class="card-title">Important Dates &amp; Status</h2>
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="postedDate">Posted Date <span class="required">*</span></label>
+                <input type="date" id="postedDate" name="postedDate" value="2026-10-15" required>
+              </div>
+              <div class="form-group">
+                <label for="deadline">Application Deadline <span class="required">*</span></label>
+                <input type="date" id="deadline" name="deadline" value="2026-10-10" class="input-error" required>
+                <span class="field-error">Application deadline cannot be before posted date.</span>
+              </div>
+              <div class="form-group">
+                <label for="jobStatus">Status <span class="required">*</span></label>
+                <select id="jobStatus" name="jobStatus" required>
+                  <option value="DRAFT">DRAFT</option>
+                  <option value="OPEN" selected>OPEN</option>
+                  <option value="CLOSED">CLOSED</option>
+                </select>
+              </div>
+            </div>
+          </section>
+          <div class="form-actions">
+            <button type="button" class="btn btn-primary">Save Job</button>
+            <button type="button" class="btn btn-primary">Update Job</button>
+            <a href="jobs.html" class="btn btn-secondary">Cancel</a>
+          </div>
+        </form>
+        <aside class="card">
+          <h2 class="card-title">Validation Examples</h2>
+          <p class="field-help" style="margin-bottom: 14px;">The following business validation constraints are verified before a job posting can be published:</p>
+          <div class="validation-msg-row">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <span>Number of openings must be greater than zero.</span>
+          </div>
+          <div class="validation-msg-row">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <span>Application deadline cannot be before posted date.</span>
+          </div>
+          <div class="validation-msg-row">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <span>Minimum package cannot exceed maximum package.</span>
+          </div>
+          <div style="margin-top: 16px; padding: 12px; background: #f8fafc; border: 1px solid var(--border); border-radius: 8px;">
+            <p style="font-size: 12px; color: var(--muted); line-height: 1.4;">
+              Ensure the hiring timeline is realistic, openings count is positive, and package ranges maintain lower bounds below upper bounds.
+            </p>
+          </div>
+        </aside>
+      </div>
+      <footer class="app-footer">Kiran Academy | Recruitment &amp; Placement Management System</footer>
+    </main>
+  </div>
+</body>
+</html>
+
